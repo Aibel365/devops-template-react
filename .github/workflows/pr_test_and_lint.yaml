@@ -24,7 +24,7 @@ jobs:
       - name: Source - npm install
         run: npm ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GH_PAT}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Source - test --if-present
         run: npm run test --if-present
