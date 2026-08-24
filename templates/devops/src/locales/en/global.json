@@ -1,0 +1,23 @@
+{
+    "clientError": {
+        "title": "Oops!",
+        "subtitle": "An error occurred when loading the page. Please contact support if the problem persists.",
+        "status": "Error: Client",
+        "link": "Go back home"
+    },
+    "forbiddenDialog": {
+        "title": "Missing permissions",
+        "description": "Your user does not have permission to work with this data",
+        "content": "Please contact the application administrator to request access, or use the ServiceNow portal."
+    },
+    "noConnectionDialog": {
+        "title": "Server connection error",
+        "description": "We seem to have lost connection with the server",
+        "content": "If this problem persists please contact the application administrator."
+    },
+    "header": {
+        "switch": "Switch account",
+        "logout": "Log out",
+        "apptitle": "Application name"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "clientError": {
+        "title": "Oops!",
+        "subtitle": "En feil oppsto under lasting av siden. Vennligst kontakt support om problemet vedvarer.",
+        "status": "Error: Client",
+        "link": "Gå tilbake"
+    },
+    "forbiddenDialog": {
+        "title": "Manglende rettigheter",
+        "description": "Din bruker har ikke tilgang til å jobbe med disse dataene",
+        "content": "Vennligst kontakt applikasjonsadministrator for å be om tilgang, eller benytt ServiceNow portalen."
+    },
+    "noConnectionDialog": {
+        "title": "Server tilkoblingsfeil",
+        "description": "Vi ser ikke ut til å klare å kommunisere med serveren",
+        "content": "Om problemet vedvarer så vennligst kontakt applikasjonsadministrator."
+    },
+    "header": {
+        "switch": "Bytt konto",
+        "logout": "Logg ut",
+        "apptitle": "Applikasjons navn"
+    }
+}
