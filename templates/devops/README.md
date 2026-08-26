@@ -6,6 +6,8 @@ https://github.com/Aibel365/devops-template-react
 - [Tanstack Add-ons](https://tanstack.com/cli/latest/docs/add-ons)
 - [TanStack Router Docs](https://tanstack.com/router)
 - [TanStack Query Docs](https://tanstack.com/query)
+- [TanStack Form Docs](https://tanstack.com/form)
+- [TanStack Store Docs](https://tanstack.com/store)
 
 ## File structure
 
@@ -60,10 +62,9 @@ This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
 
 If you prefer not to use Tailwind CSS:
 
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `npm install @tailwindcss/vite tailwindcss -D`
+1. Replace the Tailwind import in `src/styles.css` with your own styles
+2. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
+3. Uninstall the packages: `npm install @tailwindcss/vite tailwindcss -D`
 
 ## Linting & Formatting
 
