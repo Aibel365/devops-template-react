@@ -1,0 +1,36 @@
+name: PR test & lint
+run-name: ${{ github.actor }} is running Test & Lint on PR 🚀
+on:
+    pull_request:
+        types: [opened, synchronize, edited]
+        branches:
+            - "**"
+jobs:
+    validate:
+        name: "Run lint & testing on PR"
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [24.x]
+        steps:
+            - name: Init - Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v5
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Source - checkout
+              uses: actions/checkout@v5
+
+            - name: Source - npm install
+              run: npm ci
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.PRIVATE_PACKAGE_TOKEN }}
+
+            - name: Source - test --if-present
+              run: npm run test --if-present
+
+            - name: Source - lint --if-present
+              run: npm run lint --if-present
+
+            - name: Source - format:check --if-present
+              run: npm run format:check --if-present

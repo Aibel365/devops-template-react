@@ -1,0 +1,3 @@
+@import "@aibel365/devops-designsystem/styles.css";
+@import "@aibel365/devops-designsystem/aibel-theme.tailwind.css";
+@import "tailwindcss" source("../src/");

@@ -1,0 +1,62 @@
+{
+    "id": "devops-template-react",
+    "name": "aibel-frontend Template",
+    "version": "0.0.2",
+    "description": "Tanstack template for aibel frontend apps",
+    "author": "Aibel",
+    "license": "MIT",
+    "link": "https://github.com/@aibel365/devops-template-react",
+    "shadcnComponents": [],
+    "framework": "react",
+    "mode": "file-router",
+    "routes": [],
+    "warning": "",
+    "type": "starter",
+    "packageAdditions": {
+        "scripts": {
+            "test": "vitest run",
+            "knip": "knip",
+            "prepare": "husky",
+            "release": "conventional-changelog",
+            "docker:build": "docker build . -t preview",
+            "docker:run": "docker run -p 3070:8080 -d preview",
+            "update": "npx @tanstack/cli@latest create --template https://raw.githubusercontent.com/Aibel365/devops-template-react/refs/heads/main/templates/devops/template.json --non-interactive .",
+            "compile": "rimraf template.json start.json && npx @tanstack/cli@latest template compile"
+        },
+        "dependencies": {
+            "@aibel365/devops-designsystem": "^1.18.4",
+            "@azure/msal-browser": "^4.30.0",
+            "@azure/msal-react": "^3.0.29",
+            "@microsoft/applicationinsights-web": "^3.4.3",
+            "@tailwindcss/vite": "^4.3.3",
+            "@tanstack/react-form-devtools": "latest",
+            "axios": "^1.19.0",
+            "i18next": "^26.3.6",
+            "i18next-browser-languagedetector": "^8.2.1",
+            "react": "^19.2.8",
+            "react-dom": "^19.2.8",
+            "react-i18next": "^17.0.11",
+            "tailwindcss": "^4.3.2"
+        },
+        "devDependencies": {
+            "@playwright/test": "^1.62.1",
+            "@tanstack/router-cli": "^1.167.21",
+            "@types/node": "^24.13.3",
+            "@types/react": "^19.2.18",
+            "@types/react-dom": "^19.2.4",
+            "@vitejs/plugin-react": "^6.0.3",
+            "conventional-changelog": "^8.1.3",
+            "eslint": "^9.39.5",
+            "husky": "^9.1.7",
+            "jsdom": "^28.1.0",
+            "knip": "^6.32.2",
+            "lint-staged": "^17.3.0",
+            "prettier": "^3.9.6",
+            "rimraf": "^6.1.3",
+            "vite": "^8.2.1",
+            "vitest": "^4.1.10"
+        }
+    },
+    "dependsOn": ["eslint", "nitro", "form", "store", "tanstack-query"],
+    "typescript": true
+}

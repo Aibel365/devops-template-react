@@ -1,0 +1,30 @@
+name: Test Release
+
+on:
+    push:
+        branches: [test]
+
+    workflow_dispatch:
+
+permissions:
+    pull-requests: write
+    contents: write
+    packages: write
+
+jobs:
+    # Build and deploy test application to container registry
+    build-deploy:
+        uses: Aibel365/devops-common-github-actions/.github/workflows/docker-build-push-cached.yaml@test_gh_pat
+        with:
+            repository: devops/devops-template-react
+            tags: latest
+            context: ./
+            file: ./Dockerfile
+            target: final
+            hash_files_template: "**/package-lock.json"
+            push: true
+            copa_scan: true
+        secrets:
+            REGISTRY_SERVER_URLS: ${{secrets.AZURE_SERVER_URLS_CONTAINER_REGISTRY}}
+            REGISTRY_USERNAMES: ${{secrets.AZURE_CLINET_ID_CONTAINER_REGISTRY}}
+            REGISTRY_PASSWORDS: ${{secrets.AZURE_CLIENT_SECRET_CONTAINER_REGISTRY}}
